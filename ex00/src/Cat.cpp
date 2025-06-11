@@ -3,14 +3,12 @@
 Cat::Cat(void)
 {
 	this->type = "Cat";
-	this->sound = "MEOW MEOW MEOW";
 	std::cout << C_C1 "[Cat] is instanciated with default constructor." RESET << std::endl;
 }
 
 Cat::Cat(const Cat& other)
 {
 	this->type = other.type;
-	this->sound = other.sound;
 	std::cout << C_C1 "[Cat] is instanciated with copy constructor." RESET << std::endl;
 }
 
@@ -26,8 +24,12 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		this->type = other.type;
-		this->sound = other.sound;
 	}
 
 	return *this;
+}
+
+void Cat::makeSound(void)
+const {
+	std::cout << this->type << ": MEOW MEOW MEOW!" << std::endl;
 }

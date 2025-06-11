@@ -1,13 +1,11 @@
 #include "Animal.hpp"
 
-Animal::Animal(void): type("Shrek"), sound("SHREK SHREK SHREK")
+Animal::Animal(void): type("Shrek")
 {
 	std::cout << A_C1 "[Animal] is instanciated with default constructor." RESET << std::endl;
 }
 
-Animal::Animal(const Animal& other): 
-	type(other.type),
-	sound(other.sound)
+Animal::Animal(const Animal& other): type(other.type)
 {
 	std::cout << A_C1 "[Animal] is instanciated with copy constructor." RESET << std::endl;
 }
@@ -24,7 +22,6 @@ Animal& Animal::operator=(const Animal& other)
 	if (this != &other)
 	{
 		this->type = other.type;
-		this->sound = other.sound;
 	}
 
 	return *this;
@@ -32,15 +29,11 @@ Animal& Animal::operator=(const Animal& other)
 
 void Animal::makeSound(void)
 const {
-	std::cout << this->type << ": " << this->sound << std::endl;
+	std::cout << this->type << ": I am Shrek, I don't produce any sound."
+		<< std::endl;
 }
 
 const std::string& Animal::getType(void)
 const {
 	return type;
-}
-
-const std::string& Animal::getSound(void)
-const {
-	return sound;
 }

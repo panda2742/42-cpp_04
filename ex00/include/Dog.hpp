@@ -38,6 +38,10 @@ class Dog: public Animal
 	 * @param other The other instance of the class.
 	 */
 	Dog& operator=(const Dog& other);
+	/**
+	 * What does a dog do? IT BAARRRKSSSS.
+	 */
+	virtual void makeSound(void) const;
 	protected:
 	private:
 };

@@ -28,7 +28,7 @@ class Animal
 	/**
 	 * The default destructor for the Animal class.
 	 */
-	~Animal(void);
+	virtual ~Animal(void);
 	/**
 	 * The copy assignment operator for the Animal class. Copy each properties
 	 * of the given reference into this instance, and returns a reference to 
@@ -38,30 +38,20 @@ class Animal
 	 */
 	Animal& operator=(const Animal& other);
 	/**
-	 * The animal produces a noise. Call this function trigger this sound.
+	 * Shrek does not produce any sound.
 	 */
-	void makeSound(void) const;
+	virtual void makeSound(void) const;
 	/**
 	 * Get the type of the animal.
 	 * 
 	 * @return The type of the animal.
 	 */
 	const std::string& getType(void) const;
-	/**
-	 * Get the sound of the animal.
-	 * 
-	 * @return The sound of the animal.
-	 */
-	const std::string& getSound(void) const;
 	protected:
 	/**
 	 * The type of the animal (dog, cat...).
 	 */
 	std::string	type;
-	/**
-	 * The sound the animal makes.
-	 */
-	std::string	sound;
 	private:
 };
 
