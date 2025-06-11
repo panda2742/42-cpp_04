@@ -6,7 +6,7 @@
 #    By: ehosta <ehosta@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/19 15:02:31 by ehosta            #+#    #+#              #
-#    Updated: 2025/06/10 15:41:00 by ehosta           ###   ########.fr        #
+#    Updated: 2025/06/11 17:23:07 by ehosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME	:=	animals
 
 override SOURCE_DIR		:=	src/
 override INCLUDE_DIR	:=	include/
-INCLUDES				:=	Animal Cat Dog
-SOURCES					:=	Animal Cat Dog main
+INCLUDES				:=	Animal Cat Dog WrongAnimal WrongCat
+SOURCES					:=	Animal Cat Dog main WrongAnimal WrongCat
 override SOURCE			:=	$(addprefix $(SOURCE_DIR), $(addsuffix .cpp, $(SOURCES)))
 override INCLUDE		:=	$(addprefix $(INCLUDE_DIR), $(addsuffix .hpp, $(INCLUDES)))
 
@@ -24,10 +24,10 @@ override OBJ	:=	$(patsubst $(SOURCE_DIR)%.cpp, $(BUILD_DIR)%.o, $(SOURCE))
 override DEPS	:=	$(patsubst %.o, %.d, $(OBJ))
 override DIRS	:=	$(sort $(dir $(NAME) $(OBJ) $(DEPS)))
 
-CPPFLAGS	:=	-Wall -Wextra -Werror -MMD -MP -Wno-shadow --std=c++98
+CPPFLAGS	:=	-Wall -Wextra -Werror -MD -Wno-shadow --std=c++98
 MAKEFLAGS	:=	--no-print-directory
 GCC			:=	c++
-RM			:=	rm -rff
+RM			:=	rm -rf
 VG			:=	valgrind
 VGFLAGS		:=	--leak-check=full --show-leak-kinds=all --track-origins=yes --show-mismatched-frees=yes --track-fds=yes --trace-children=yes
 
