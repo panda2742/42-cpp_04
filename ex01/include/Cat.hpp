@@ -1,0 +1,49 @@
+#ifndef CAT_HPP
+# define CAT_HPP
+
+# include "Animal.hpp"
+
+# define C_C1 "\e[48;2;100;255;100m"
+# define C_C2 "\e[38;2;100;255;100m"
+
+/**
+ * Represent the Cat class.
+ * 
+ * @extends Animal
+ */
+class Cat: public Animal
+{
+	public:
+	/**
+	 * The default constructor for the Cat class. Instanciate with default 
+	 * values.
+	 */
+	Cat(void);
+	/**
+	 * The copy constructor for the Cat class. Instanciate a new class based 
+	 * on the class reference passed to the constructor.
+	 * 
+	 * @param other THe other instance of the class.
+	 */
+	Cat(const Cat& other);
+	/**
+	 * The default destructor for the Animal class.
+	 */
+	~Cat(void);
+	/**
+	 * The copy assignment operator for the Cat class. Copy each properties of
+	 * the given reference into this instance, and returns a reference to this
+	 * instance.
+	 * 
+	 * @param other The other instance of the class.
+	 */
+	Cat& operator=(const Cat& other);
+	/**
+	 * What does a cat do? IT MEOOWWWSSSS.
+	 */
+	virtual void makeSound(void) const;
+	protected:
+	private:
+};
+
+#endif /* CAT_HPP */
