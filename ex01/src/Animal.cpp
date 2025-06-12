@@ -1,4 +1,5 @@
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 Animal::Animal(void): type("Shrek")
 {
@@ -37,3 +38,9 @@ const std::string& Animal::getType(void)
 const {
 	return type;
 }
+
+Brain*	Animal::getBrain(void)
+const {
+	return NULL;
+}
+

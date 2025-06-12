@@ -1,6 +1,7 @@
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
+# include "Brain.hpp"
 # include <iostream>
 
 # define A_C1 "\e[48;2;255;100;100m"
@@ -41,6 +42,10 @@ class Animal
 	 * Shrek does not produce any sound.
 	 */
 	virtual void makeSound(void) const;
+	/**
+	 * Ehm... Shrek does not have any brain.
+	 */
+	virtual Brain* getBrain(void) const;
 	/**
 	 * Get the type of the animal.
 	 * 

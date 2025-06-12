@@ -41,7 +41,7 @@ class Dog: public Animal
 	/**
 	 * What does a dog do? IT BAARRRKSSSS.
 	 */
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 	protected:
 	private:
 };

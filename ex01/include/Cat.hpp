@@ -2,6 +2,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 # define C_C1 "\e[48;2;100;255;100m"
 # define C_C2 "\e[38;2;100;255;100m"
@@ -41,9 +42,19 @@ class Cat: public Animal
 	/**
 	 * What does a cat do? IT MEOOWWWSSSS.
 	 */
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
+	/**
+	 * Get a the pointer of the animal brain.
+	 * 
+	 * @returns The animal brain.
+	 */
+	Brain* getBrain(void) const;
 	protected:
 	private:
+	/**
+	 * The brain of this animal.
+	 */
+	Brain*	_brain;
 };
 
 #endif /* CAT_HPP */

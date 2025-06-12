@@ -2,6 +2,7 @@
 # define Dog_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 # define D_C1 "\e[48;2;100;100;255m"
 # define D_C2 "\e[38;2;100;100;255m"
@@ -41,9 +42,19 @@ class Dog: public Animal
 	/**
 	 * What does a dog do? IT BAARRRKSSSS.
 	 */
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
+	/**
+	 * Get a the pointer of the animal brain.
+	 * 
+	 * @returns The animal brain.
+	 */
+	Brain* getBrain(void) const;
 	protected:
 	private:
+	/**
+	 * The brain of this animal.
+	 */
+	Brain*	_brain;
 };
 
 #endif /* Dog_HPP */

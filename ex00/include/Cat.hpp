@@ -41,7 +41,7 @@ class Cat: public Animal
 	/**
 	 * What does a cat do? IT MEOOWWWSSSS.
 	 */
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 	protected:
 	private:
 };

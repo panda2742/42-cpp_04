@@ -37,12 +37,39 @@ class Brain
 	 * @param other The other instance of the class.
 	 */
 	Brain& operator=(const Brain& other);
+	/**
+	 * Display N to P ideas of the ideas list.
+	 * 
+	 * @param N The first index.
+	 * @param P the second index.
+	 */
+	void displayIdeas(std::size_t N, std::size_t P);
+	/**
+	 * Get an idea from the list.
+	 * 
+	 * @param N the position of the idea.
+	 * @param content The string containing the idea.
+	 */
+	std::string getIdea(std::size_t N) const;
+	/**
+	 * Set an idea of the list.
+	 * 
+	 * @param N the position of the idea.
+	 * @returns The string containing the idea.
+	 */
+	void setIdea(std::size_t N, std::string content);
 	protected:
 	private:
 	/**
 	 * The array of ideas.
 	 */
 	std::string	_ideas[100];
+	/**
+	 * Deep copy all the ideas from the other instance.
+	 * 
+	 * @param other The other instance to get the ideas from.
+	 */
+	void _deepCopyIdeas(const Brain& other);
 };
 
 #endif
