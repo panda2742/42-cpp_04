@@ -6,7 +6,7 @@
 #    By: ehosta <ehosta@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/19 15:02:31 by ehosta            #+#    #+#              #
-#    Updated: 2025/06/11 17:39:01 by ehosta           ###   ########.fr        #
+#    Updated: 2025/06/13 09:27:20 by ehosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ override OBJ	:=	$(patsubst $(SOURCE_DIR)%.cpp, $(BUILD_DIR)%.o, $(SOURCE))
 override DEPS	:=	$(patsubst %.o, %.d, $(OBJ))
 override DIRS	:=	$(sort $(dir $(NAME) $(OBJ) $(DEPS)))
 
-CPPFLAGS	:=	-Wall -Wextra -Werror -MD -Wno-shadow --std=c++98
+CPPFLAGS	:=	-Wall -Wextra -Werror -MD -Wshadow --std=c++98
 MAKEFLAGS	:=	--no-print-directory
 GCC			:=	c++
 RM			:=	rm -rf
