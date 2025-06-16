@@ -37,7 +37,9 @@ class Ice: public AMateria
 	 */
 	Ice& operator=(const Ice& other);
 	/**
-	 * *Absolute virtual method noises.*
+	 * Clone the instance into another one.
+	 * 
+	 * @returns A new allocated instance.
 	 */
 	Ice* clone(void) const;
 	/**

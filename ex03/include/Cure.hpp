@@ -37,7 +37,9 @@ class Cure: public AMateria
 	 */
 	Cure& operator=(const Cure& other);
 	/**
-	 * *Absolute virtual method noises.*
+	 * Clone the instance into another one.
+	 * 
+	 * @returns A new allocated instance.
 	 */
 	Cure* clone(void) const;
 	/**

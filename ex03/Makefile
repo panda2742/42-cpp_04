@@ -6,7 +6,7 @@
 #    By: ehosta <ehosta@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/19 15:02:31 by ehosta            #+#    #+#              #
-#    Updated: 2025/06/13 09:47:01 by ehosta           ###   ########.fr        #
+#    Updated: 2025/06/16 18:23:08 by ehosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME	:=	interfaces
 
 override SOURCE_DIR		:=	src/
 override INCLUDE_DIR	:=	include/
-INCLUDES				:=	AMateria Cure Ice
-SOURCES					:=	AMateria Cure Ice main
+INCLUDES				:=	AMateria Character Cure Ice ICharacter IMateriaSource MateriaSource
+SOURCES					:=	AMateria Character Cure Ice main MateriaSource
 override SOURCE			:=	$(addprefix $(SOURCE_DIR), $(addsuffix .cpp, $(SOURCES)))
 override INCLUDE		:=	$(addprefix $(INCLUDE_DIR), $(addsuffix .hpp, $(INCLUDES)))
 
