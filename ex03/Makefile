@@ -6,7 +6,7 @@
 #    By: ehosta <ehosta@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/19 15:02:31 by ehosta            #+#    #+#              #
-#    Updated: 2025/06/16 18:23:08 by ehosta           ###   ########.fr        #
+#    Updated: 2025/06/17 13:24:16 by ehosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	:=	interfaces
 override SOURCE_DIR		:=	src/
 override INCLUDE_DIR	:=	include/
 INCLUDES				:=	AMateria Character Cure Ice ICharacter IMateriaSource MateriaSource
-SOURCES					:=	AMateria Character Cure Ice main MateriaSource
+SOURCES					:=	AMateria Character Cure Ice ICharacter IMateriaSource main MateriaSource
 override SOURCE			:=	$(addprefix $(SOURCE_DIR), $(addsuffix .cpp, $(SOURCES)))
 override INCLUDE		:=	$(addprefix $(INCLUDE_DIR), $(addsuffix .hpp, $(INCLUDES)))
 
@@ -24,7 +24,7 @@ override OBJ	:=	$(patsubst $(SOURCE_DIR)%.cpp, $(BUILD_DIR)%.o, $(SOURCE))
 override DEPS	:=	$(patsubst %.o, %.d, $(OBJ))
 override DIRS	:=	$(sort $(dir $(NAME) $(OBJ) $(DEPS)))
 
-CPPFLAGS	:=	-Wall -Wextra -Werror -MD -Wshadow --std=c++98
+CPPFLAGS	:=	-Wall -Wextra -Werror -MD -Wshadow --std=c++98 -g3
 MAKEFLAGS	:=	--no-print-directory
 GCC			:=	c++
 RM			:=	rm -rf

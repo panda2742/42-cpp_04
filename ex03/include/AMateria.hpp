@@ -32,7 +32,7 @@ class AMateria
 	/**
 	 * The default destructor of the class.
 	 */
-	~AMateria(void);
+	virtual ~AMateria(void);
 	/**
 	 * The copy assignment operator of the class.
 	 * 

@@ -20,9 +20,7 @@ Ice::~Ice(void)
 
 Ice& Ice::operator=(const Ice& other)
 {
-	// if (this != &other)
-	// 	this->type = other.type;
-
+	(void)other;
 	return *this;
 }
 
@@ -33,5 +31,5 @@ const {
 
 void Ice::use(ICharacter& target)
 {
-	std::cout << "* shoots an ice bolt at " << target.name << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

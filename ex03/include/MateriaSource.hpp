@@ -31,8 +31,13 @@ class MateriaSource: public IMateriaSource
 	 * @param other The other instance to copy data from.
 	 */
 	MateriaSource& operator=(const MateriaSource& other);
-	void learnMateria(AMateria*);
+	void learnMateria(AMateria* m);
 	AMateria* createMateria(const std::string& type);
+	private:
+	/**
+	 * The materia factory inventory. Has 4 slots.
+	 */
+	AMateria*	_templates[4];
 };
 
 #endif
